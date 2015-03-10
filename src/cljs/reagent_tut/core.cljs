@@ -1,10 +1,10 @@
 (ns reagent-tut.core
     (:require [reagent.core :as reagent]))
 
-(defn home []
-  [:div [:h1 "Welcome to Reagent Cookbook!"]
-   
-   ])
+(defn comment-box [] 
+  [:div 
+   {:className "commentBox"} 
+   "Hello, world! I am a CommentBox."])
 
-(reagent/render-component [home]
+(reagent/render-component [comment-box]
                           (.getElementById js/document "app"))
